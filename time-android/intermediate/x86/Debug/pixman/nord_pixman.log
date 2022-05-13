@@ -1,0 +1,62 @@
+﻿  ANDROID_HOME=C:\\Microsoft\AndroidSDK\25
+  ANT_HOME=C:\Program Files\Microsoft Visual Studio\2022\Community\Apps\apache-ant-1.9.3
+  JAVA_HOME=C:\Program Files\Android\jdk\jdk-8.0.302.8-hotspot\jdk8u302-b08
+  NDK_ROOT=C:\archive\android-ndk-r23b
+  pixman-conical-gradient.c
+  In file included from pixman\pixman-conical-gradient.c:28:
+  In file included from C:\basis\source\third\pixman\config.h:4:
+C:\basis\operating-system\operating-system-android\_seed\../../operating-system-android\operating_system/third_private_config.h(7,10): fatal error : 'platform/config.h' file not found
+  #include "platform/config.h"
+           ^~~~~~~~~~~~~~~~~~~
+  1 error generated.
+  pixman-access.c
+  In file included from pixman\pixman-access.c:28:
+  In file included from C:\basis\source\third\pixman\config.h:4:
+C:\basis\operating-system\operating-system-android\_seed\../../operating-system-android\operating_system/third_private_config.h(7,10): fatal error : 'platform/config.h' file not found
+  #include "platform/config.h"
+           ^~~~~~~~~~~~~~~~~~~
+  pixman-edge-accessors.c
+  1 error generated.
+  In file included from pixman\pixman-edge-accessors.c:4:
+  In file included from pixman/pixman-edge.c:24:
+  In file included from C:\basis\source\third\pixman\config.h:4:
+C:\basis\operating-system\operating-system-android\_seed\../../operating-system-android\operating_system/third_private_config.h(7,10): fatal error : 'platform/config.h' file not found
+  #include "platform/config.h"
+           ^~~~~~~~~~~~~~~~~~~
+  1 error generated.
+  pixman-access-accessors.c
+  pixman-bits-image.c
+  In file included from pixman\pixman-access-accessors.c:3:
+  In file included from pixman/pixman-access.c:28:
+  In file included from C:\basis\source\third\pixman\config.h:4:
+C:\basis\operating-system\operating-system-android\_seed\../../operating-system-android\operating_system/third_private_config.h(7,10): fatal error : 'platform/config.h' file not found
+  #include "platform/config.h"
+           ^~~~~~~~~~~~~~~~~~~
+  1 error generated.
+  In file included from pixman\pixman-bits-image.c:30:
+  In file included from C:\basis\source\third\pixman\config.h:4:
+C:\basis\operating-system\operating-system-android\_seed\../../operating-system-android\operating_system/third_private_config.h(7,10): fatal error : 'platform/config.h' file not found
+  #include "platform/config.h"
+           ^~~~~~~~~~~~~~~~~~~
+  1 error generated.
+  pixman-combine-float.c
+  pixman-combine32.c
+  In file included from pixman\pixman-combine-float.c:29:
+  In file included from C:\basis\source\third\pixman\config.h:4:
+C:\basis\operating-system\operating-system-android\_seed\../../operating-system-android\operating_system/third_private_config.h(7,10): fatal error : 'platform/config.h' file not found
+  #include "platform/config.h"
+           ^~~~~~~~~~~~~~~~~~~
+  1 error generated.
+  In file included from pixman\pixman-combine32.c:25:
+  In file included from C:\basis\source\third\pixman\config.h:4:
+C:\basis\operating-system\operating-system-android\_seed\../../operating-system-android\operating_system/third_private_config.h(7,10): fatal error : 'platform/config.h' file not found
+  #include "platform/config.h"
+           ^~~~~~~~~~~~~~~~~~~
+  1 error generated.
+  pixman-arm.c
+  In file included from pixman\pixman-arm.c:23:
+  In file included from C:\basis\source\third\pixman\config.h:4:
+C:\basis\operating-system\operating-system-android\_seed\../../operating-system-android\operating_system/third_private_config.h(7,10): fatal error : 'platform/config.h' file not found
+  #include "platform/config.h"
+           ^~~~~~~~~~~~~~~~~~~
+  1 error generated.
