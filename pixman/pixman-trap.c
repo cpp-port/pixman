@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2002 Keith Packard, member of The XFree86 Project, Inc.
  * Copyright © 2004 Keith Packard
  *
@@ -98,7 +98,7 @@ pixman_edge_step (pixman_edge_t *e,
 
     e->x += n * e->stepx;
 
-    ne = e->e + n * (pixman_fixed_48_16_t) e->dx;
+    ne = e->e + n * (pixman_fixed_48_16_t) e->x;
 
     if (n >= 0)
     {
