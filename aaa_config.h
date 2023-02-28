@@ -1,7 +1,8 @@
-#pragma once
+﻿#pragma once
 
 
-#include "operating_system/third_private_config.h"
+#include "config.h"
+
 
 #ifdef WIN32
 #define PIXMAN_API __declspec(dllexport)

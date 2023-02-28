@@ -113,7 +113,7 @@
     <ClInclude Include="pixman\loongson-mmintrin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="config.h">
+    <ClInclude Include="aaa_config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
