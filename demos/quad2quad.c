@@ -1,6 +1,6 @@
 #include <math.h>
 #include <stdio.h>
-#include <pixman.h>
+#include <pixman/pixman.h>
 
 /* This code is basically the output of Maxima translated into C.
  *

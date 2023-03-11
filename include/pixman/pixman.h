@@ -69,7 +69,7 @@ SOFTWARE.
 #ifndef PIXMAN_H__
 #define PIXMAN_H__
 
-#include <pixman-version.h>
+#include <pixman/pixman-version.h>
 
 #ifdef  __cplusplus
 #define PIXMAN_BEGIN_DECLS extern "C" {

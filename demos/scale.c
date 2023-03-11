@@ -28,7 +28,7 @@
 #endif
 #include <math.h>
 #include <gtk/gtk.h>
-#include <pixman.h>
+#include <pixman/pixman.h>
 #include <stdlib.h>
 #include "gtk-utils.h"
 
