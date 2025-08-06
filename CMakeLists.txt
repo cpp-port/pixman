@@ -31,13 +31,26 @@ list(APPEND library_source
        pixman/pixman-region16.c
        pixman/pixman-region32.c
        pixman/pixman-solid-fill.c
-       pixman/pixman-sse2.c
-       pixman/pixman-ssse3.c
        pixman/pixman-timer.c
        pixman/pixman-trap.c
        pixman/pixman-utils.c
        pixman/pixman-version.h.in
 )
+
+
+if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
+  # Code specific to 64-bit Intel
+  list(APPEND library_source
+     pixman/pixman-sse2.c
+     pixman/pixman-ssse3.c
+  )
+elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "i.86")
+  # Code specific to 32-bit Intel
+  list(APPEND library_source
+     pixman/pixman-sse2.c
+     pixman/pixman-ssse3.c
+  )
+endif()
 
 
 if(${ALTIVEC})
