@@ -80,14 +80,14 @@ if(${IS_ARM_SIMD})
 
 endif()
 
-if(${IS_X86_ARCH})
+#if(${IS_X86_ARCH})
 
   list(APPEND library_source
           pixman/pixman-x86.c
 
   )
 
-endif()
+#endif()
 
 if(${IS_MIPS})
   list(APPEND library_source
