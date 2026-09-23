@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 project(pixman C)
 
+
+message("CMake <<== Trash : ${PROJECT_NAME}")
+
+
 set(PIXMAN_TARGET_ARMV7 FALSE)
 
 if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(arm|ARM|armv7|ARMV7)" OR ANDROID_ABI STREQUAL "armeabi-v7a")
@@ -138,7 +142,7 @@ list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/../..)
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/include/pixman)
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating_system/operating_system-${PLATFORM_NAME}/configuration/${PROJECT_NAME})
 
-if(ANDROID)
+if(__ANDROID__)
   set(ANDROID_CPU_FEATURES_INCLUDE_DIR "${ANDROID_NDK}/sources/android/cpufeatures")
   if(EXISTS "${ANDROID_CPU_FEATURES_INCLUDE_DIR}/cpu-features.h")
     list(APPEND library_include_directories ${ANDROID_CPU_FEATURES_INCLUDE_DIR})
