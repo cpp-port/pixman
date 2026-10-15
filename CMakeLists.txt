@@ -1,6 +1,18 @@
 cmake_minimum_required(VERSION 3.16)
 project(pixman C)
 
+if(__REACTOS__)
+    set(PIXMAN_VERSION_MAJOR 0)
+    set(PIXMAN_VERSION_MINOR 40)
+    set(PIXMAN_VERSION_MICRO 0)
+    file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/generated/pixman")
+    configure_file(pixman/pixman-version.h.in "${CMAKE_CURRENT_BINARY_DIR}/generated/pixman/pixman-version.h" @ONLY)
+    file(READ "${WORKSPACE_FOLDER}/operating_system/operating_system-windows/configuration/pixman/config.h" pixman_config)
+    string(REGEX REPLACE "#define USE_[A-Z0-9_]+ 1" "" pixman_config "${pixman_config}")
+    file(GENERATE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/config.h" CONTENT "${pixman_config}")
+
+endif()
+
 
 message("CMake <<== Trash : ${PROJECT_NAME}")
 
@@ -182,3 +194,9 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories
 target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_directories})
 
 
+
+if(__REACTOS__)
+    target_include_directories(pixman BEFORE PRIVATE "${CMAKE_CURRENT_BINARY_DIR}" "${CMAKE_CURRENT_BINARY_DIR}/generated" "${CMAKE_CURRENT_SOURCE_DIR}/include")
+    target_include_directories(pixman INTERFACE "${CMAKE_CURRENT_BINARY_DIR}/generated" "${CMAKE_CURRENT_SOURCE_DIR}/include" "${CMAKE_CURRENT_SOURCE_DIR}/include/pixman")
+    set_target_properties(static_pixman PROPERTIES EXCLUDE_FROM_ALL TRUE)
+endif()
